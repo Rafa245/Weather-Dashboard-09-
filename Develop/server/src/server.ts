@@ -1,24 +1,41 @@
 import dotenv from 'dotenv';
-import express, { urlencoded } from 'express';
-// import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Load environment variables
 dotenv.config();
 
-// Import the routes
+// Import routes
 import routes from './routes/index.js';
 
 const app = express();
-
 const PORT = process.env.PORT || 3001;
 
-// TODO: Serve static files of entire client dist folder
-app.use(express.static(`../client/dist`))
+// Resolve correct directory path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// TODO: Implement middleware for parsing JSON and urlencoded form data
-app.use(express.json())
-app.use(urlencoded({extended: true}))
+// Serve static files from client dist folder
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
-// TODO: Implement middleware to connect the routes
+// Middleware for parsing JSON and urlencoded form data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Connect the routes
 app.use(routes);
 
-// Start the server on the port
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+// Error handling middleware with explicit typing
+app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
+    if (err instanceof Error) {
+      console.error(err.stack);
+      res.status(500).json({ message: err.message });
+    } else {
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
+  
+
+// Start the server
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

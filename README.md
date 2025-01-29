@@ -2,8 +2,6 @@
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
   by Rafael Yuri Guerra
   ## Table of Contents
-- [Weather Dashboard](#weather-dashboard)
-  - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Requirements](#requirements)
   - [Usage](#usage)
@@ -15,17 +13,20 @@
   ## Requirements
   Understading of Typescript, Javascript, Node.js, HTML, CSS
   ## Usage
-  Run npm run start:dev and then open localhost in your browser
+  User is able to connect to a Weather Api database, where once they choose a city they will be prompted with the cities six key categories (city name, date, weather icon with the weather description in the alt tag, current temperature, current humidity, and wind speed) are displayed.
   ## Contact-Me
   * Name - Rafael Yuri Guerra
   * Email - rafaguerra245@hotmail.com
   * GitHub - [Rafa245](https://github.com/Rafa245)
   ## Contributors
-  N/A
+  ChatGpt 
   ## Testing
-  N/A 
+  Open the project and when in the root type "npm run dev" to get the project running.
+
+  Link to project: https://github.com/Rafa245/Weather-Dashboard-09-
 
   License: MIT 
 
   https://opensource.org/licenses/MIT
   
+  ![Weather DashBoard ScreenShot](Assets/09-servers-and-apis-homework-demo.png)
