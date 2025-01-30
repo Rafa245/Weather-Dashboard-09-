@@ -8,19 +8,11 @@
     "id": "4a05d892-ca05-44ae-bfdb-5e19201863c6"
   },
   {
-    "name": "chicago",
-    "id": "aa60d44a-c471-4a00-8b52-99de9d15f70f"
-  },
-  {
-    "name": "california",
-    "id": "bfc6a66a-1984-4130-8c98-ed7b5dc123e8"
-  },
-  {
-    "name": "illinois",
-    "id": "bba857d0-cbd9-4465-a7d6-b36d56a60b77"
-  },
-  {
     "name": "Hawaii",
     "id": "9c527201-12b6-4f70-b858-9372ef181e58"
+  },
+  {
+    "name": "kansas",
+    "id": "164d20a0-7f78-476c-8cf0-a594b7a4163a"
   }
 ]
