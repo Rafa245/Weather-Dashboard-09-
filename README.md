@@ -28,5 +28,6 @@
   License: MIT 
 
   https://opensource.org/licenses/MIT
+
+  ![Weather DashBoard ScreenShot](Assets/Weather-Dashboard-ScreenShot.jpg)
   
-  ![Weather DashBoard ScreenShot](Assets/09-servers-and-apis-homework-demo.png)
