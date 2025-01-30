@@ -21,7 +21,7 @@
   ## Contributors
   ChatGpt 
   ## Testing
-  Open the project and when in the root type "npm run dev" to get the project running.
+  Open the project and when in the Develop folder type "npm run build" then "npm run dev" to get the project running.
 
   Link to project: https://github.com/Rafa245/Weather-Dashboard-09-
 
