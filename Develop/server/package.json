@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "npx tsc",
-    "start": "npm run build && node dist/server.js --ignore client",
+    "start": "bun src/server.ts",
     "dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

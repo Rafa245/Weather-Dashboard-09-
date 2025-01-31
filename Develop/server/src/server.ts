@@ -1,7 +1,5 @@
 import dotenv from 'dotenv';
 import express, { Request, Response, NextFunction } from 'express';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 // Load environment variables
 dotenv.config();
@@ -12,12 +10,8 @@ import routes from './routes/index.js';
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Resolve correct directory path
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Serve static files from client dist folder
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static('../client/dist'));
 
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
